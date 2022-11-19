@@ -1,8 +1,8 @@
 @import "C:/\67Werx\\stylewerx\\src\\swx.less";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Open+Sans:wght@400;700&display=swap');
 
 
-@fs: 2rem;
+@fs: 1.5rem;
 @fs-small: .5em;
 @lh: 1.5;
 @base-s: (@fs*@lh);
@@ -19,10 +19,11 @@
 @gap: 0;
 
 @full-w: ((@ip-w + (@base-s * 2)) + ((@gap * 2) + (@pad * 2)));
-@stack-w: ((@full-w - @base-s) + (@gap + (@pad * 2)));
+@stack-w: (@full-w - @base-s);
 @halfbtn-w: (@stack-w - (@base-s/2));
 
 @bts-y-h: ((@base-s/2) + (@pad * 2) + @gap);
+
 
 body, section, div, h6, button, code, input {
 	border: 0;
@@ -32,13 +33,14 @@ body, section, div, h6, button, code, input {
 }
 
 body {
-	font-family: 'Open Sans';
-	font-size: 2rem;
-	line-height: 1.5;
+	font-family: 'Barlow';
+	font-size: @fs;
+//	line-height: @lh;
 	background: #DDE;
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center; 
+	gap: 2rem;
 }
 
 
@@ -67,19 +69,38 @@ input::-webkit-inner-spin-button {
 
 section {
 	display: flex;
-	flex-flow: row nowrap;
+	width: 40%;
+	flex-flow: row wrap;
+	#jc.c();
 	align-items: center;
-	gap: 2rem;
-	padding: 2rem;
-	background: hsl(200, 15%, 85%);
+	column-gap: 1rem;
+
+	& h6 {
+		font-size: .8em;
+		flex: 1 0 100%;
+		#text.center();
+		line-height: 2;
+	}
+
+	&.row-c-nogap {
+		
+		column-gap: 2px;
+
+		& label {
+			display: flex;
+			#jc.c();
+			font-size: 1rem;
+			width: 100%;
+		}
+	}
 }
 
 
 input {
 	display: flex;
-	font-family: "Source Code Pro";
-	font-size: (@fs * .75);
-	font-weight: bold;
+	font-family: "Bebas Neue";
+	font-size: @fs;
+//	font-weight: bold;
 	flex: 1;
 	height: @base-s;
 //	line-height: @lh;
@@ -97,7 +118,6 @@ button {
 
 .twx-stepper {
 	display: flex;
-
 	height: @base-s;
 
 	& > input {
@@ -109,33 +129,74 @@ button {
 	}
 }
 
-.btns-split {
+.btns-x {
 	width: @full-w;
-	.setOrder(2, 1, 3);
 
-	&.btns-half-w {
+	&.btns-split {
+		.setOrder(2, 1, 3);
+	}
+
+	&.btns-left {
+		.setOrder(3, 1, 2);
+	}
+
+	&.btns-right {
+		.setOrder(1, 2, 3);
+	}
+
+	&.btns-half {
 		width: @stack-w;
 		font-size: @fs-small;
 	}
-//	&.btns-half-y > button {
-//		width: (@base-s / 2);
-//		font-size: .75em;		
-//	}
 }
 
 .btns-y {
+
+	flex-flow: column wrap;
+	align-items: stretch;
+	width: @stack-w;
+
+	& > button {
+		height: (@base-s / 2);
+		width: @base-s;
+		font-size: @fs-small;
+	}
+
+	&.btns-half {
+		width: @halfbtn-w;
+		& > button {
+			width: (@base-s/2);
+		}
+	}
+
+	&.btns-left {
+		.setOrder(3, 2, 1);
+	}
+
+	&.btns-right {
+		.setOrder(1, 3, 2);
+	}
+}
+
+.stepper-y {
 	#flex.col();
+	#jc.str();
 	height: (@base-s * 2);
-	width: 2.5rem;
+	width: @base-s;
+
+	&.stepper-dub-w {
+		width: (@base-s * 2);
+	}
 	& > input {
 		order: 2;
 		width: 100%;
-		flex: none;
+		flex: 2;
 	}
 
 	& > button {
 		font-size: @fs-small;
-		height: (@base-s / 2);
+		flex: 1;
+//		height: (@base-s / 2);
 	}
 
 	& > .btn-dec {
@@ -144,59 +205,6 @@ button {
 
 	& > .btn-inc {
 		order: 1;
-	}
-}
-
-.btns-stacked {
-	flex-flow: column wrap;
-	align-items: stretch;
-	width: @stack-w;
-
-	& > button {
-		width: @base-s;
-		font-size: @fs-small;
-	}
-
-	&.btns-left {
-		.setOrder(3, 2, 1);
-	}
-	
-	&.btns-right {
-		.setOrder(1, 3, 2);
-	}
-	
-}
-
-.btns-stacked-h {
-	flex-flow: column wrap;
-	align-items: stretch;
-	width: @halfbtn-w;
-
-/*	& > input {
-		flex: 2 0 100%;
-	}
-*/
-	& > button {
-		flex: 1 1 auto;
-		font-size: @fs-small;
-		width: (@base-s / 2);
-	}
-	&.btns-left {
-		& > input {
-			order: 3;
-		}
-	
-		& > .btn-dec {
-			order: 2;
-		}
-	
-		& > .btn-inc {
-			order: 1;
-		}
-	}
-	
-	&.btns-right {
-		.setOrder(1, 3, 2);
 	}
 }
 
@@ -216,17 +224,51 @@ button {
 }
 
 .stepper-base {
-	border: 1px solid @fb-25;
-	.br(.5rem);
-	& > .btn-dec {
-		border-right: 1px solid @fb-25;
-		#br.l(.5rem;)
+
+	&.btns-split {
+		& > .btn-dec {
+			
+		}
+	
+		& > .btn-inc {
+			
+		}
 	}
 
-	& > .btn-inc {
-		border-left: 1px solid @fb-25;
-		#br.r(.5rem);
+	&.btns-left {
+		& > input {
+		}
+		& > .btn-dec {
+			
+		}
+	
+		& > .btn-inc {
+			
+		}
 	}
+
+	&.btns-right {
+		& > input {
+			
+		}
+		& > .btn-dec {
+			
+		}
+	
+		& > .btn-inc {
+			
+		}
+	}
+
+	&.btns-y > .btn-inc {
+		
+	}
+
+	
+}
+
+#stepYear {
+
 }
 
 .stepper-2 {

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>jQuery Numeric Stepper Tool</title>
+	<title>ToowWerx Stepper</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" type="text/css" href="/css/stepper.css">
@@ -10,15 +10,39 @@
 
 </head>
 <body>
-
-	<h2>The ToolWerx Stepper</h2>
-
 	<section>
-		<div id="btnsSplit"></div>
-		<div id="btnsSplitShort"></div>
-		<div id="btnsLeft"></div>
-		<div id="btnsRight"></div>
-		<div id="btnsY"></div>
+		<h6>Buttons X, Full Size</h6>
+		<div id="defaultSplit"></div>
+		<div id="defaultLeft"></div>
+		<div id="defaultRight"></div>
+	</section>
+	<section>
+		<h6>Buttons X, Half Size</h6>
+		<div id="halfXSplit"></div>
+		<div id="halfXLeft"></div>
+		<div id="halfXRight"></div>
+	</section>
+	<section>
+		<h6>Buttons Y, Full & Half Size</h6>
+		<div id="yLeft"></div>
+		<div id="yRight"></div>
+		<div id="yHalfLeft"></div>
+		<div id="yHalfRight"></div>
+	</section>
+	<section class="row-c-nogap">
+		<h6>Vertical Orientation</h6>
+		<div>
+			<label>Day</label>
+			<div id="stepDay"></div>
+		</div>
+		<div>
+			<label>Mth</label>
+			<div id="stepMonth"></div>
+		</div>
+		<div>
+			<label>Year</label>
+			<div id="stepYear"></div>
+		</div>
 	</section>
 
 </body>

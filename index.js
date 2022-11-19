@@ -1,72 +1,165 @@
 import { buttonOpts } from "./js/buttonopts.js"
 import Stepper from "./js/stepper.js"
 
-const step1wrap = document.getElementById("btnsSplit")
-const step1opts = {
-	classes: [ "stepper-base", "btns-split"],
+const defaultSplitWrap = document.getElementById("defaultSplit")
+const defaultSplitOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-split"],
 	attr: {
-		name: "stepper1",
+		name: "defSplit",
+		value: 10
+	},
+	buttons: buttonOpts.light,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const defaultLeftWrap = document.getElementById("defaultLeft")
+const defaultLeftOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-left"],
+	attr: {
+		name: "defLeft",
 		value: 10
 	},
 	buttons: buttonOpts.default,
 	onValueSet: e => console.log( e.detail.value )
 }
 
-const step2wrap = document.getElementById("btnsSplitShort")
-const step2opts = {
-	classes: ["stepper-2", "btns-split", "btns-half-w" ],
+const defaultRightWrap = document.getElementById("defaultRight")
+const defaultRightOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-right"],
 	attr: {
-		name: "stepper2",
-		min: 0,
-		max: 10,
-		value: 5
+		name: "defRight",
+		value: 10
+	},
+	buttons: buttonOpts.arrows.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const halfSplitWrap = document.getElementById("halfXSplit")
+const halfSplitOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-half", "btns-split"],
+	attr: {
+		name: "halfXSplit",
+		value: 10
+	},
+	buttons: buttonOpts.default,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const xLeftHalfWrap = document.getElementById("halfXLeft")
+const xLeftHalfOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-half", "btns-left"],
+	attr: {
+		name: "halfXLeft",
+		value: 10
+	},
+	buttons: buttonOpts.chevron.x,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const xRightHalfWrap = document.getElementById("halfXRight")
+const xRightHalfOpts = {
+	classes: [ "stepper-base", "btns-x", "btns-half", "btns-right"],
+	attr: {
+		name: "halfXRight",
+		value: 10
 	},
 	buttons: buttonOpts.pointer.x,
 	onValueSet: e => console.log( e.detail.value )
 }
 
-const stepLeftwrap = document.getElementById("btnsLeft")
-const stepLeftopts = {
-	classes: ["btns-stacked-h", "btns-left"],
+const yLeftWrap = document.getElementById("yLeft")
+const yLeftOpts = {
+	classes: [ "stepper-base", "btns-y", "btns-left"],
 	attr: {
-		name: "stepLeft",
-		value: 50,
-		min: 0,
-		max: 100,
-		step: 5
-	},
-	buttons: buttonOpts.chevron.y,
-	onValueSet: e => console.log( e.detail.value )
-}
-
-const stepRightwrap = document.getElementById("btnsRight")
-const stepRightopts = {
-	classes: ["btns-stacked", "btns-right"],
-	attr: {
-		name: "stepRight",
-		value: 0,
-		min: 0,
-		max: 10,
-		step: .5
-	},
-	buttons: buttonOpts.pointer.y,
-	onValueSet: e => console.log( e.detail.value )
-}
-
-const stepYopts = {
-	classes: ["btns-y"],
-	attr: {
-		name: "stepY",
+		name: "yLeft",
 		value: 10
 	},
 	buttons: buttonOpts.chevron.y,
 	onValueSet: e => console.log( e.detail.value )
 }
 
-const stepYwrap = document.getElementById("btnsY")
+const yRightWrap = document.getElementById("yRight")
+const yRightOpts = {
+	classes: [ "stepper-base", "btns-y", "btns-right"],
+	attr: {
+		name: "yRight",
+		value: 10
+	},
+	buttons: buttonOpts.pointer.y,
+	onValueSet: e => console.log( e.detail.value )
+}
 
-const stepper1 = new Stepper( step1wrap, step1opts );
-const splitHalf = new Stepper( step2wrap, step2opts );
-const stepperLeft = new Stepper( stepLeftwrap, stepLeftopts );
-const stepperRight = new Stepper( stepRightwrap, stepRightopts );
-const stepperY = new Stepper( stepYwrap, stepYopts );
+const yLeftHalfWrap = document.getElementById("yHalfLeft")
+const yLeftHalfOpts = {
+	classes: [ "stepper-base", "btns-y", "btns-half", "btns-left"],
+	attr: {
+		name: "halfYLeft",
+		value: 10
+	},
+	buttons: buttonOpts.chevron.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const yRightHalfWrap = document.getElementById("yHalfRight")
+const yRightHalfOpts = {
+	classes: [ "stepper-base", "btns-y", "btns-half", "btns-right"],
+	attr: {
+		name: "halfYRight",
+		value: 10
+	},
+	buttons: buttonOpts.pointer.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const stepDayWrap = document.getElementById("stepDay");
+const stepDayOpts = {
+	classes: [ "stepper-y"],
+	attr: {
+		name: "stepDay",
+		value: 1,
+		min: 1,
+		max: 31
+	},
+	buttons: buttonOpts.pointer.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const stepMonthWrap = document.getElementById("stepMonth");
+const stepMonthOpts = {
+	classes: [ "stepper-y"],
+	attr: {
+		name: "stepMonth",
+		value: 1,
+		min: 1,
+		max: 12
+	},
+	buttons: buttonOpts.pointer.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const stepYearWrap = document.getElementById("stepYear");
+const stepYearOpts = {
+	classes: [ "stepper-y", "stepper-dub-w"],
+	attr: {
+		name: "stepYear",
+		value: 2022,
+		min: 1951,
+		max: 2050
+	},
+	buttons: buttonOpts.pointer.y,
+	onValueSet: e => console.log( e.detail.value )
+}
+
+const defSplit = new Stepper( defaultSplitWrap, defaultSplitOpts );
+const defSplitLeft = new Stepper( defaultLeftWrap, defaultLeftOpts );
+const defSplitRight = new Stepper( defaultRightWrap, defaultRightOpts );
+const halfSplit = new Stepper( halfSplitWrap, halfSplitOpts );
+const halfXLeft = new Stepper( xLeftHalfWrap, xLeftHalfOpts );
+const halfXRight = new Stepper( xRightHalfWrap, xRightHalfOpts );
+const yLeft = new Stepper( yLeftWrap, yLeftOpts );
+const yRight = new Stepper( yRightWrap, yRightOpts );
+const halfYLeft = new Stepper( yLeftHalfWrap, yLeftHalfOpts );
+const halfYRight = new Stepper( yRightHalfWrap, yRightHalfOpts );
+const dayStepper = new Stepper( stepDayWrap, stepDayOpts );
+const monthStepper = new Stepper( stepMonthWrap, stepMonthOpts );
+const yearStepper = new Stepper( stepYearWrap, stepYearOpts );
