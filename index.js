@@ -8,7 +8,7 @@ const defaultSplitOpts = {
 		name: "defSplit",
 		value: 10
 	},
-	buttons: buttonOpts.light,
+	buttons: buttonOpts.default,
 	onValueSet: e => console.log( e.detail.value )
 }
 

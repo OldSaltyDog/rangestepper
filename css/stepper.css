@@ -125,7 +125,7 @@ button:disabled {
   flex: 1;
 }
 .btns-x {
-  width: 8.375rem;
+  width: 7.875rem;
 }
 .btns-x.btns-split > input {
   order: 2;
@@ -155,13 +155,13 @@ button:disabled {
   order: 3;
 }
 .btns-x.btns-half {
-  width: 6.125rem;
+  width: 5.625rem;
   font-size: 0.5em;
 }
 .btns-y {
   flex-flow: column wrap;
   align-items: stretch;
-  width: 6.125rem;
+  width: 5.625rem;
 }
 .btns-y > button {
   height: 1.125rem;
@@ -169,7 +169,7 @@ button:disabled {
   font-size: 0.5em;
 }
 .btns-y.btns-half {
-  width: 5rem;
+  width: 4.5rem;
 }
 .btns-y.btns-half > button {
   width: 1.125rem;
@@ -216,4 +216,66 @@ button:disabled {
 }
 .stepper-y > .btn-inc {
   order: 1;
+}
+.twx-stepper {
+  border-radius: 0.5rem;
+  padding: 0;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3), 0 6px 12px -3px rgba(0, 0, 0, 0.2);
+}
+.twx-stepper.btns-x.btns-split > .btn-dec {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.twx-stepper.btns-x.btns-split > .btn-inc {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.twx-stepper.btns-x.btns-left > .btn-dec {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.twx-stepper.btns-x.btns-left > input {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.twx-stepper.btns-x.btns-right > input {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.twx-stepper.btns-x.btns-right > .btn-inc {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.twx-stepper.btns-y.btns-left > input {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.twx-stepper.btns-y.btns-left > .btn-inc {
+  border-top-left-radius: 0.5rem;
+}
+.twx-stepper.btns-y.btns-left > .btn-dec {
+  border-bottom-left-radius: 0.5rem;
+}
+.twx-stepper.btns-y.btns-right > input {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.twx-stepper.btns-y.btns-right > .btn-inc {
+  border-top-right-radius: 0.5rem;
+}
+.twx-stepper.btns-y.btns-right > .btn-dec {
+  border-bottom-right-radius: 0.5rem;
+}
+.twx-stepper.stepper-y > .btn-inc {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.twx-stepper.stepper-y > .btn-dec {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.twx-stepper > input {
+  background: #FFF;
+  box-shadow: 0 0 0 2px #39c inset, 0 1px 2px 2px rgba(0, 0, 0, 0.25) inset;
+}
+.twx-stepper > button {
+  background: #39C;
+  color: #f9f9f9;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+.twx-stepper.btns-y > .btn-inc {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.twx-stepper.btns-x:is(.btns-left, .btns-right) > .btn-inc {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }

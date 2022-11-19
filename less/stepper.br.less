@@ -1,0 +1,80 @@
+.stepper-br(@br; @pad: 0) {
+
+	#br.outer(@br, @pad);
+	padding: @pad;
+	&.btns-x {
+		
+		&.btns-split {
+
+			& > .btn-dec {
+				#br.l(@br);
+			}
+			
+			& > .btn-inc {
+				#br.r(@br);
+			}
+
+		}
+
+		&.btns-left {
+			& > .btn-dec {
+				#br.l(@br);
+			}
+
+			& > input {
+				#br.r(@br);
+			}
+		}
+
+		&.btns-right {
+			& > input {
+				#br.l(@br);
+			}
+			
+			& > .btn-inc {
+				#br.r(@br);
+			}
+		}
+	}
+
+	&.btns-y {
+
+		&.btns-left {
+			
+			& > input {
+				#br.r(@br);
+			}
+			& > .btn-inc {
+				#br.tl(@br);
+			}
+
+			& > .btn-dec {
+				#br.bl(@br);
+			}
+		}
+
+		&.btns-right {
+			
+			& > input {
+				#br.l(@br);
+			}
+			& > .btn-inc {
+				#br.tr(@br);
+			}
+
+			& > .btn-dec {
+				#br.br(@br);
+			}
+		}
+	}
+
+	&.stepper-y {
+		& > .btn-inc {
+			#br.t(@br);
+		}
+
+		& > .btn-dec {
+			#br.b(@br);
+		}
+	}
+}

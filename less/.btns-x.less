@@ -1,3 +1,8 @@
+/**
+ * 	 
+ * 
+ */
+
 
 
 .btns-half {
@@ -7,10 +12,8 @@
 
 .btns-x {
 
-	width: ((@ip-w + (@base-s * 2)) + ((@pad * 2) + (@gap + 2)));
-
 	&.btns-half {
-		width: ((@ip-w + @base-s) + ((@pad * 2) + (@gap + 2)));
+
 	}
 
 	&.btns-split {
@@ -26,15 +29,10 @@
 	}
 }
 
-.btns-y() {
-
-	flex-flow: column wrap;
-	align-items: stretch;
-	width: ((@ip-w + @base-s) + ((@pad * 2) + (@gap + 2)));
+.btns-y {
 
 	&.btns-half {
-		width: ((@ip-w + (@base-s/2)) + ((@pad * 2) + (@gap + 2)));
-		font-size: @fs-small;
+
 	}
 
 	&.btns-left {

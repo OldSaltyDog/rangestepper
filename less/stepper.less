@@ -1,6 +1,6 @@
 @import "C:/\67Werx\\stylewerx\\src\\swx.less";
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Open+Sans:wght@400;700&display=swap');
-
+@import "stepper.br.less";
 
 @fs: 1.5rem;
 @fs-small: .5em;
@@ -21,8 +21,6 @@
 @full-w: ((@ip-w + (@base-s * 2)) + (@pad * 2));
 @stack-w: (@full-w - @base-s);
 @halfbtn-w: (@stack-w - (@base-s/2));
-
-@bts-y-h: ((@base-s/2) + (@pad * 2) + @gap);
 
 
 body, section, div, h6, button, code, input {
@@ -195,7 +193,6 @@ button {
 	& > button {
 		font-size: @fs-small;
 		flex: 1;
-//		height: (@base-s / 2);
 	}
 
 	& > .btn-dec {
@@ -222,42 +219,28 @@ button {
 	}
 }
 
-.stepper-base {
-
-	&.btns-split {
-		& > .btn-dec {
-			
-		}
-	
-		& > .btn-inc {
-			
-		}
+.twx-stepper {
+	.stepper-br(.5rem);
+	box-shadow: 0 2px 4px -2px @fb-30, 0 6px 12px -3px @fb-20;
+	& > input {
+		#bg.add(#FFF);
+		#frame.in.all(2px, #39c);
+		.bsi(0 1px 2px 2px @fb-25);
 	}
 
-	&.btns-left {
-		& > input {
-		}
-		& > .btn-dec {
-			
-		}
-	
-		& > .btn-inc {
-			
-		}
+	& > button {
+		#bg.add(#39C);
+		color: #f9f9f9;
+		text-shadow: 1px 2px 1px @fb-25;
 	}
 
-	&.btns-right {
-		& > input {
-			
-		}
-		& > .btn-dec {
-			
-		}
-	
-		& > .btn-inc {
-			
-		}
+	&.btns-y > .btn-inc {
+		border-bottom: 1px solid @fw-20;
 	}
 
+	&.btns-x:is(.btns-left, .btns-right) > .btn-inc {
+		border-left: 1px solid @fw-20;
+	}
+	
 	
 }
