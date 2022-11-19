@@ -18,7 +18,7 @@
 @pad: 0;
 @gap: 0;
 
-@full-w: ((@ip-w + (@base-s * 2)) + ((@gap * 2) + (@pad * 2)));
+@full-w: ((@ip-w + (@base-s * 2)) + (@pad * 2));
 @stack-w: (@full-w - @base-s);
 @halfbtn-w: (@stack-w - (@base-s/2));
 
@@ -98,14 +98,13 @@ section {
 
 input {
 	display: flex;
+	#jc.c();
 	font-family: "Bebas Neue";
 	font-size: @fs;
-//	font-weight: bold;
-	flex: 1;
 	height: @base-s;
-//	line-height: @lh;
 	text-align: center;
 	user-select: none;
+	cursor: pointer;
 }
 
 button {
@@ -260,31 +259,5 @@ button {
 		}
 	}
 
-	&.btns-y > .btn-inc {
-		
-	}
-
 	
-}
-
-#stepYear {
-
-}
-
-.stepper-2 {
-	#box.border();
-	#bg.add(#E3E3E3);
-	.bs(0 0 1px 0 @fb-40);
-	.bs(0 2px 2px -1px @fb-25);
-
-	& > input, button {
-	}
-
-	& > input {
-		#bg.add(@t);
-	}
-
-	& > button {
-		#bg.add(#FFF);
-	}
 }

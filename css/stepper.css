@@ -99,12 +99,13 @@ section.row-c-nogap label {
 }
 input {
   display: flex;
+  justify-content: center;
   font-family: "Bebas Neue";
   font-size: 1.5rem;
-  flex: 1;
   height: 2.25rem;
   text-align: center;
   user-select: none;
+  cursor: pointer;
 }
 button {
   user-select: none;
@@ -124,7 +125,7 @@ button:disabled {
   flex: 1;
 }
 .btns-x {
-  width: 7.875rem;
+  width: 8.375rem;
 }
 .btns-x.btns-split > input {
   order: 2;
@@ -154,13 +155,13 @@ button:disabled {
   order: 3;
 }
 .btns-x.btns-half {
-  width: 5.625rem;
+  width: 6.125rem;
   font-size: 0.5em;
 }
 .btns-y {
   flex-flow: column wrap;
   align-items: stretch;
-  width: 5.625rem;
+  width: 6.125rem;
 }
 .btns-y > button {
   height: 1.125rem;
@@ -168,7 +169,7 @@ button:disabled {
   font-size: 0.5em;
 }
 .btns-y.btns-half {
-  width: 4.5rem;
+  width: 5rem;
 }
 .btns-y.btns-half > button {
   width: 1.125rem;
@@ -215,15 +216,4 @@ button:disabled {
 }
 .stepper-y > .btn-inc {
   order: 1;
-}
-.stepper-2 {
-  box-sizing: border-box;
-  background: #E3E3E3;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4), 0 2px 2px -1px rgba(0, 0, 0, 0.25);
-}
-.stepper-2 > input {
-  background: transparent;
-}
-.stepper-2 > button {
-  background: #FFF;
 }

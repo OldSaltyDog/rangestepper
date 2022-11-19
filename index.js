@@ -14,7 +14,7 @@ const defaultSplitOpts = {
 
 const defaultLeftWrap = document.getElementById("defaultLeft")
 const defaultLeftOpts = {
-	classes: [ "stepper-base", "btns-x", "btns-left"],
+	classes: [ "btns-x", "btns-left"],
 	attr: {
 		name: "defLeft",
 		value: 10
@@ -25,7 +25,7 @@ const defaultLeftOpts = {
 
 const defaultRightWrap = document.getElementById("defaultRight")
 const defaultRightOpts = {
-	classes: [ "stepper-base", "btns-x", "btns-right"],
+	classes: [ "btns-x", "btns-right"],
 	attr: {
 		name: "defRight",
 		value: 10
@@ -36,7 +36,7 @@ const defaultRightOpts = {
 
 const halfSplitWrap = document.getElementById("halfXSplit")
 const halfSplitOpts = {
-	classes: [ "stepper-base", "btns-x", "btns-half", "btns-split"],
+	classes: [ "btns-x", "btns-half", "btns-split"],
 	attr: {
 		name: "halfXSplit",
 		value: 10
@@ -47,7 +47,7 @@ const halfSplitOpts = {
 
 const xLeftHalfWrap = document.getElementById("halfXLeft")
 const xLeftHalfOpts = {
-	classes: [ "stepper-base", "btns-x", "btns-half", "btns-left"],
+	classes: [ "btns-x", "btns-half", "btns-left"],
 	attr: {
 		name: "halfXLeft",
 		value: 10
@@ -58,7 +58,7 @@ const xLeftHalfOpts = {
 
 const xRightHalfWrap = document.getElementById("halfXRight")
 const xRightHalfOpts = {
-	classes: [ "stepper-base", "btns-x", "btns-half", "btns-right"],
+	classes: [ "btns-x", "btns-half", "btns-right"],
 	attr: {
 		name: "halfXRight",
 		value: 10
@@ -69,7 +69,7 @@ const xRightHalfOpts = {
 
 const yLeftWrap = document.getElementById("yLeft")
 const yLeftOpts = {
-	classes: [ "stepper-base", "btns-y", "btns-left"],
+	classes: [ "btns-y", "btns-left"],
 	attr: {
 		name: "yLeft",
 		value: 10
@@ -80,7 +80,7 @@ const yLeftOpts = {
 
 const yRightWrap = document.getElementById("yRight")
 const yRightOpts = {
-	classes: [ "stepper-base", "btns-y", "btns-right"],
+	classes: [ "btns-y", "btns-right"],
 	attr: {
 		name: "yRight",
 		value: 10
@@ -91,7 +91,7 @@ const yRightOpts = {
 
 const yLeftHalfWrap = document.getElementById("yHalfLeft")
 const yLeftHalfOpts = {
-	classes: [ "stepper-base", "btns-y", "btns-half", "btns-left"],
+	classes: [ "btns-y", "btns-half", "btns-left"],
 	attr: {
 		name: "halfYLeft",
 		value: 10
@@ -102,7 +102,7 @@ const yLeftHalfOpts = {
 
 const yRightHalfWrap = document.getElementById("yHalfRight")
 const yRightHalfOpts = {
-	classes: [ "stepper-base", "btns-y", "btns-half", "btns-right"],
+	classes: [ "btns-y", "btns-half", "btns-right"],
 	attr: {
 		name: "halfYRight",
 		value: 10
