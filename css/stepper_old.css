@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+[type=number] {
+	-moz-appearance: textfield;
+}
+
+body, section, div, h6, button, code, input {
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans';
+	font-size: 2rem;
+	line-height: 1.5;
+	background: #DDE;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center; 
+}
+
+section {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+	background: #525458;
+}
+
+input {
+	font-family: "Source Code Pro";
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.5;
+	user-select: none;
+}
+
+[class^="wxi-"] {
+	display: flex;
+	height: 3rem;
+    width: 3rem;
+    font-size: 1.25rem;
+    
+}
+
+[class^="wxi-"]::before {
+    display: flex;
+    margin: auto;
+}
+
+button {
+	user-select: none;
+	cursor: pointer;
+}
+
+.twx-stepper {
+	display: flex;
+	align-self: center;
+	flex: none;
+}
+
+.twx-stepper > input {
+	text-align: center;
+	width: 4.5rem;
+}
+
+.btns-split > button {
+	font-size: 2rem;
+}
+
+.btns-split > button:first-of-type {
+	border-radius: .5rem 0 0 .5rem;
+}
+
+.btns-split > button:last-of-type {
+	border-radius: 0 .5rem .5rem 0;
+}
+
+.btns-half-y > button {
+	width: 1.5rem;
+	font-size: .75em;
+}
+
+.btns-split > input {
+	order: 2;
+}
+
+.btns-split > .btn-dec {
+	order: 1;
+}
+
+.btns-split > .btn-inc {
+	order: 3;
+}
+
+.btns-stacked {
+/*	display: flex; */
+	flex-flow: column wrap;
+	height: 3rem;
+	width: 7.5rem; 
+}
+
+.btns-stacked > button {
+	height: 50%;
+}
+
+.btns-left > input {
+	order: 3;
+	border-radius: 0 .5rem .5rem 0;
+}
+
+.btns-left > .btn-dec {
+	order: 2;
+	border-radius: 0 0 0 .5rem;
+}
+
+.btns-left > .btn-inc {
+	order: 1;
+	border-radius: .5rem 0 0 0;
+}
+
+.btns-right > input {
+	order: 1;
+	border-radius: .5rem 0 0 .5rem;
+}
+
+.btns-right > .btn-dec {
+	order: 3;
+	border-radius: 0 0 .5rem 0;
+}
+
+.btns-right > .btn-inc {
+	order: 2;
+	border-radius: 0 .5rem 0 0;
+}
+
+.btns-y {
+	flex-flow: column nowrap;
+}
+
+.btns-y > input {
+	order: 2;
+	width: 3rem;
+}
+
+.btns-y > button {
+	order: 2;
+	height: 1.5rem;
+	font-size: .5em;
+}
+
+.btns-y > .btn-inc {
+	order: 1;
+	border-radius: .5rem .5rem 0 0;
+}
+
+.btns-y > .btn-dec {
+	order: 3;
+	border-radius: 0 0 .5rem .5rem;
+}
+
+pre {
+	display: none;
+	font-size: 1rem;
+	flex: 1 0 auto;
+	background: #222428;
+	color: #CCA;
+	padding: 1rem;
+}

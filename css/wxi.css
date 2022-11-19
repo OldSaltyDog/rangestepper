@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'wxi';
+  src: url('/webfonts/wxi.eot?55648126');
+  src: url('/webfonts/wxi.eot?55648126#iefix') format('embedded-opentype'),
+       url('/webfonts/wxi.woff2?55648126') format('woff2'),
+       url('/webfonts/wxi.woff?55648126') format('woff'),
+       url('/webfonts/wxi.ttf?55648126') format('truetype'),
+       url('/webfonts/wxi.svg?55648126#wxi') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="wxi-"] {
+  font-family: "wxi";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wxi-plus:before { content: '\e800'; }
+.wxi-minus:before { content: '\e803'; }
+.wxi-chevron-up:before { content: '\e805'; }
+.wxi-chevron-down:before { content: '\e801'; }
+.wxi-chevron-left:before { content: '\e802'; }
+.wxi-chevron-right:before { content: '\e804'; }
+.wxi-arrow-up-bold:before { content: '\e809'; }
+.wxi-arrow-down-bold:before { content: '\e806'; }
+.wxi-arrow-left-bold:before { content: '\e807'; }
+.wxi-arrow-right-bold:before { content: '\e808'; }
+.wxi-pointer-down:before { content: '\e80a'; }
+.wxi-pointer-up:before { content: '\e80b'; }
+.wxi-pointer-left:before { content: '\e80c'; }
+.wxi-pointer-right:before { content: '\e80d'; }
+.wxi-light-down:before { content: '\e80e'; }
+.wxi-light-up:before { content: '\e80f'; }
+.wxi-volume-down:before { content: '\e810'; }
+.wxi-volume:before { content: '\e811'; }
+.wxi-volume-up:before { content: '\e812'; }
+.wxi-zoom-in:before { content: '\f07e'; }
+.wxi-zoom-out:before { content: '\f07f'; }

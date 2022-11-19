@@ -1,0 +1,248 @@
+@import "C:/\67Werx\\stylewerx\\src\\swx.less";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+
+
+@fs: 2rem;
+@fs-small: .5em;
+@lh: 1.5;
+@base-s: (@fs*@lh);
+@ipw-mod: 1.5;
+@ip-w: (@base-s * @lh);
+
+
+@panel: hsl(30, 15%, 80%);
+@tool: hsl(0, 0, 90%);
+@btn: hsl(0, 0, 80%);
+@fc: hsl(190, 25%, 35%);
+
+@pad: 0;
+@gap: 0;
+
+@full-w: ((@ip-w + (@base-s * 2)) + ((@gap * 2) + (@pad * 2)));
+@stack-w: ((@full-w - @base-s) + (@gap + (@pad * 2)));
+@halfbtn-w: (@stack-w - (@base-s/2));
+
+@bts-y-h: ((@base-s/2) + (@pad * 2) + @gap);
+
+body, section, div, h6, button, code, input {
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans';
+	font-size: 2rem;
+	line-height: 1.5;
+	background: #DDE;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center; 
+}
+
+
+[class^="wxi-"] {
+	display: flex;
+	font-size: inherit;
+
+	&::before {
+		display: flex;
+    	margin: auto;
+	}
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+[type=number] {
+	-moz-appearance: textfield;
+	appearance: textfield
+}
+
+section {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+	background: hsl(200, 15%, 85%);
+}
+
+
+input {
+	display: flex;
+	font-family: "Source Code Pro";
+	font-size: (@fs * .75);
+	font-weight: bold;
+	flex: 1;
+	height: @base-s;
+//	line-height: @lh;
+	text-align: center;
+	user-select: none;
+}
+
+button {
+	user-select: none;
+	cursor: pointer;
+	&:disabled {
+		#frame.in.all(.25rem, red);
+	}
+}
+
+.twx-stepper {
+	display: flex;
+
+	height: @base-s;
+
+	& > input {
+		width: @ip-w;
+	}
+
+	& > button {
+		flex: 1;
+	}
+}
+
+.btns-split {
+	width: @full-w;
+	.setOrder(2, 1, 3);
+
+	&.btns-half-w {
+		width: @stack-w;
+		font-size: @fs-small;
+	}
+//	&.btns-half-y > button {
+//		width: (@base-s / 2);
+//		font-size: .75em;		
+//	}
+}
+
+.btns-y {
+	#flex.col();
+	height: (@base-s * 2);
+	width: 2.5rem;
+	& > input {
+		order: 2;
+		width: 100%;
+		flex: none;
+	}
+
+	& > button {
+		font-size: @fs-small;
+		height: (@base-s / 2);
+	}
+
+	& > .btn-dec {
+		order: 3;
+	}
+
+	& > .btn-inc {
+		order: 1;
+	}
+}
+
+.btns-stacked {
+	flex-flow: column wrap;
+	align-items: stretch;
+	width: @stack-w;
+
+	& > button {
+		width: @base-s;
+		font-size: @fs-small;
+	}
+
+	&.btns-left {
+		.setOrder(3, 2, 1);
+	}
+	
+	&.btns-right {
+		.setOrder(1, 3, 2);
+	}
+	
+}
+
+.btns-stacked-h {
+	flex-flow: column wrap;
+	align-items: stretch;
+	width: @halfbtn-w;
+
+/*	& > input {
+		flex: 2 0 100%;
+	}
+*/
+	& > button {
+		flex: 1 1 auto;
+		font-size: @fs-small;
+		width: (@base-s / 2);
+	}
+	&.btns-left {
+		& > input {
+			order: 3;
+		}
+	
+		& > .btn-dec {
+			order: 2;
+		}
+	
+		& > .btn-inc {
+			order: 1;
+		}
+	}
+	
+	&.btns-right {
+		.setOrder(1, 3, 2);
+	}
+}
+
+.setOrder(@input: 1; @btn-dec: 2; @btn-inc: 3) {
+
+	& > input {
+		order: @input;
+	}
+
+	& > .btn-dec {
+		order: @btn-dec;
+	}
+
+	& > .btn-inc {
+		order: @btn-inc;
+	}
+}
+
+.stepper-base {
+	border: 1px solid @fb-25;
+	.br(.5rem);
+	& > .btn-dec {
+		border-right: 1px solid @fb-25;
+		#br.l(.5rem;)
+	}
+
+	& > .btn-inc {
+		border-left: 1px solid @fb-25;
+		#br.r(.5rem);
+	}
+}
+
+.stepper-2 {
+	#box.border();
+	#bg.add(#E3E3E3);
+	.bs(0 0 1px 0 @fb-40);
+	.bs(0 2px 2px -1px @fb-25);
+
+	& > input, button {
+	}
+
+	& > input {
+		#bg.add(@t);
+	}
+
+	& > button {
+		#bg.add(#FFF);
+	}
+}

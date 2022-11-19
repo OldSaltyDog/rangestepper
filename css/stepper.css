@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcecodepro/v22/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQhM4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sourcecodepro/v22/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DCuXhM4.ttf) format('truetype');
+}
+body,
+section,
+div,
+h6,
+button,
+code,
+input {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans';
+  font-size: 2rem;
+  line-height: 1.5;
+  background: #DDE;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+[class^="wxi-"] {
+  display: flex;
+  font-size: inherit;
+}
+[class^="wxi-"]::before {
+  display: flex;
+  margin: auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: hsl(200, 15%, 85%);
+}
+input {
+  display: flex;
+  font-family: "Source Code Pro";
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+  height: 3rem;
+  text-align: center;
+  user-select: none;
+}
+button {
+  user-select: none;
+  cursor: pointer;
+}
+button:disabled {
+  box-shadow: 0 0 0 0.25rem red inset;
+}
+.twx-stepper {
+  display: flex;
+  height: 3rem;
+}
+.twx-stepper > input {
+  width: 4.5rem;
+}
+.twx-stepper > button {
+  flex: 1;
+}
+.btns-split {
+  width: 10.5rem;
+}
+.btns-split > input {
+  order: 2;
+}
+.btns-split > .btn-dec {
+  order: 1;
+}
+.btns-split > .btn-inc {
+  order: 3;
+}
+.btns-split.btns-half-w {
+  width: 7.5rem;
+  font-size: 0.5em;
+}
+.btns-y {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  width: 2.5rem;
+}
+.btns-y > input {
+  order: 2;
+  width: 100%;
+  flex: none;
+}
+.btns-y > button {
+  font-size: 0.5em;
+  height: 1.5rem;
+}
+.btns-y > .btn-dec {
+  order: 3;
+}
+.btns-y > .btn-inc {
+  order: 1;
+}
+.btns-stacked {
+  flex-flow: column wrap;
+  align-items: stretch;
+  width: 7.5rem;
+}
+.btns-stacked > button {
+  width: 3rem;
+  font-size: 0.5em;
+}
+.btns-stacked.btns-left > input {
+  order: 3;
+}
+.btns-stacked.btns-left > .btn-dec {
+  order: 2;
+}
+.btns-stacked.btns-left > .btn-inc {
+  order: 1;
+}
+.btns-stacked.btns-right > input {
+  order: 1;
+}
+.btns-stacked.btns-right > .btn-dec {
+  order: 3;
+}
+.btns-stacked.btns-right > .btn-inc {
+  order: 2;
+}
+.btns-stacked-h {
+  flex-flow: column wrap;
+  align-items: stretch;
+  width: 6rem;
+  /*	& > input {
+		flex: 2 0 100%;
+	}
+*/
+}
+.btns-stacked-h > button {
+  flex: 1 1 auto;
+  font-size: 0.5em;
+  width: 1.5rem;
+}
+.btns-stacked-h.btns-left > input {
+  order: 3;
+}
+.btns-stacked-h.btns-left > .btn-dec {
+  order: 2;
+}
+.btns-stacked-h.btns-left > .btn-inc {
+  order: 1;
+}
+.btns-stacked-h.btns-right > input {
+  order: 1;
+}
+.btns-stacked-h.btns-right > .btn-dec {
+  order: 3;
+}
+.btns-stacked-h.btns-right > .btn-inc {
+  order: 2;
+}
+.stepper-base {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+.stepper-base > .btn-dec {
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.stepper-base > .btn-inc {
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.stepper-2 {
+  box-sizing: border-box;
+  background: #E3E3E3;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4), 0 2px 2px -1px rgba(0, 0, 0, 0.25);
+}
+.stepper-2 > input {
+  background: transparent;
+}
+.stepper-2 > button {
+  background: #FFF;
+}

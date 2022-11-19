@@ -1,0 +1,16 @@
+{
+  "name": "rangestepper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stepper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lessc --math=strict ./less/stepper.less ./css/stepper.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  }
+}
