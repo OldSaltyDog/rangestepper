@@ -106,6 +106,7 @@ input {
   text-align: center;
   user-select: none;
   cursor: pointer;
+  pointer-events: none;
 }
 button {
   user-select: none;
